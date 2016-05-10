@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 import glob
 import os
 import re
@@ -25,10 +27,10 @@ def convertToZeroOne(in_img_filename, in_cordinate_file, out_file_loc):
     imageW = im.size[0]
     imageH = im.size[1]
     
-    for y in range(0, imageH):
-      for x in range(0, imageW):
-        xy = (x, y)
-        imN.putpixel(xy, 0)
+#    for y in range(0, imageH):
+#      for x in range(0, imageW):
+#        xy = (x, y)
+#        imN.putpixel(xy, 1)
 #         print imN.getpixel(xy)
     
     imN.putpixel(point1, 1)
@@ -40,9 +42,9 @@ def convertToZeroOne(in_img_filename, in_cordinate_file, out_file_loc):
 # ==============================================Main============================================
 img_top_loc = "/u/koller/work/signlanguage/setups/features/phoenix-cont/all.20120120/magdalena-orig/data/01.feature-extraction-orig-210-260-TRAIN-colorChannels3.dump/RWTH-PHOENIX-v02-split01-CLEANED.compound/"
 
-cordinate_loc = "/work/cv2/koller/features/phoenix-cont/all.20120120/magdalena-tracking-groundtrouth-newIds.20120626/data/manualAnnotations/train/right-hand-frames/RWTH-PHOENIX-v02-split01-CLEANED.compound/"
+cordinate_loc = "/work/cv2/koller/features/phoenix-cont/all.20120120/magdalena-tracking-groundtrouth-newIds.20120626/data/manualAnnotations/test/right-hand-frames/RWTH-PHOENIX-v02-split01-CLEANED.compound/"
 
-out_dir = "/work/cv3/zaman/TraningImageOutput"
+out_dir = "/work/cv3/zaman/TraningImageOutput/"
 
 sub_dir_with_img = "/1/u/signlanguage/phoenix/video/divx2pass/all-years"
 
